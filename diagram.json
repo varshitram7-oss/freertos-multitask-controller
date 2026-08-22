@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Vila Ram Varshit",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -120, "left": 100, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": 160, "left": 100, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": -50, "left": -120, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "dht:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "dht:VCC", "red", [ "v0" ] ],
+    [ "esp:4", "dht:SDA", "green", [ "v0" ] ],
+    [ "esp:GND.2", "lcd:GND", "black", [ "v0" ] ],
+    [ "esp:5V", "lcd:VCC", "red", [ "v0" ] ],
+    [ "esp:21", "lcd:SDA", "blue", [ "v0" ] ],
+    [ "esp:22", "lcd:SCL", "yellow", [ "v0" ] ],
+    [ "esp:GND.3", "btn:1.l", "black", [ "v0" ] ],
+    [ "esp:15", "btn:2.l", "purple", [ "v0" ] ]
+  ]
+}
