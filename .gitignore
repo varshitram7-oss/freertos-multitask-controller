@@ -1,0 +1,12 @@
+# ESP-IDF build output
+build/
+
+# Firmware images and object files
+*.elf
+*.bin
+*.map
+*.o
+*.d
+
+# Arduino IDE / PlatformIO caches
+.pio/
