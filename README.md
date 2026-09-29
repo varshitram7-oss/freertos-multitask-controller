@@ -6,6 +6,12 @@
 [![Simulation: Wokwi](https://img.shields.io/badge/Simulator-Wokwi%20Live-purple.svg)](https://wokwi.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+
+▶️ **[Try it live on Wokwi](https://wokwi.com/projects/476481547999036417)** — runs this firmware in a browser simulation (ESP32 + DHT22 + LCD + pushbutton).
+
+*Note: the live demo is an Arduino-ESP32 adaptation of the repo's ESP-IDF source (entry point only); all task, queue, mutex, ISR and timer logic is unchanged.*
+
+
 An industrial-grade, multi-threaded embedded firmware engine built on the **FreeRTOS Real-Time Operating System**. Demonstrates preemptive priority scheduling, thread-safe inter-task communication (**Queues**), shared resource synchronization with priority inheritance (**Mutexes**), interrupt deferred processing from ISRs (`xQueueSendFromISR`), and auto-reload software timers.
 
 ---
